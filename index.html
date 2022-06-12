@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/styles/style.css">
-  <title>Counter-Strike Quiz</title>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <title>Quiz Counter-Strike</title>
 </head>
 
 <body>
+  <header class="title">
+    <section class="container">
+      <div>
+        <h1>Quiz Counter-Strike</h1>
+        <h3>Brazilian Edition</h3>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn rules-btn" id="rules">Regras</button>
+        <button type="submit" class="btn start-btn" id="start">Iniciar</button>
+      </div>
+    </section>
+  </header>
+  <main>
+    <div id="game-board">
+      <div class="rules-board hidden">
+        <ul>
+          <li>Este é um jogo de 5 perguntas sobre o cenário de Counter-Strike brasileiro.</li>
+          <li>Você tem 4 companheiros de time (vidas) para vencer a partida (quiz).</li>
+          <li>A cada resposta errada você perde 1 companheiro.</li>
+        </ul>
+        <button type="submit" id="entendi" class="btn entendi-btn">Ok. Let's GO!</button>
+      </div>
+    </div>
+  </main>
 
-
-
-
-
+  <footer>Feito com lágrimas e desespero por <a href="http://github.com/mauricio-alves" target="_blank">Maurício
+      Alves</a>
+  </footer>
   <script src="./assets/scripts/game.js"></script>
   <script src="./assets/scripts/index.js"></script>
 </body>
