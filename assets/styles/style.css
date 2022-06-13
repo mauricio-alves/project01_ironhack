@@ -14,7 +14,7 @@ body {
 
 main {
   height: 600px;
-  background-image: url("../images/1499897809_cs_assault_5053.jpg");
+  background-image: url("../images/cs_fy_pool_day.jpg");
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -71,16 +71,27 @@ footer a {
   font-weight: bold;
 }
 
+#user-chances {
+  top: 187px;
+  right: 360px;
+  text-align: center;
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  position: fixed;
+}
+
 .rules-board {
   background-color: white;
   display: flex;
   width: 400px;
-  height: 200px;
-  font-size: 11px;
+  height: 250px;
+  font-size: 14px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 25px;
+  border-radius: 10px;
 }
 
 .entendi-btn {
@@ -95,4 +106,13 @@ footer a {
 
 .hidden {
   display: none;
+}
+
+.first-question {
+  padding: 20px 0 0 20px;
+  background-color: white;
+  width: 300px;
+  height: 150px;
+  font-size: 14px;
+  border-radius: 10px;
 }

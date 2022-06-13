@@ -24,16 +24,40 @@
   </header>
   <main>
     <div id="game-board">
+      <div id="user-chances" class="hidden">
+        <p>Você tem <span>4</span> chances.</p>
+      </div>
       <div class="rules-board hidden">
         <ul>
           <li>Este é um jogo de 5 perguntas sobre o cenário de Counter-Strike brasileiro.</li>
-          <li>Você tem 4 companheiros de time (vidas) para vencer a partida (quiz).</li>
-          <li>A cada resposta errada você perde 1 companheiro.</li>
+          <li>Você tem 4 companheiros de time (chances) para vencer a partida (quiz).</li>
+          <li>A cada resposta errada, você perde 2 companheiros (chances).</li>
+          <li>Se suas chances acabarem, você perde!</li>
+          <li><b>Ready? Go! Go! Go!</b>
+          </li>
         </ul>
-        <button type="submit" id="entendi" class="btn entendi-btn">Ok. Let's GO!</button>
+        <button type="submit" id="entendi" class="btn entendi-btn">OK. Let's GO!</button>
       </div>
     </div>
+
+    <div class="first-question hidden">
+      <p>Em qual ano foi lançado o game?</p>
+      <form>
+        <input type="radio" id="1999" name="question_1" value="1999">
+        <label for="1999">1999</label><br>
+        <input type="radio" id="2003" name="question_1" value="2003">
+        <label for="2003">2003</label><br>
+        <input type="radio" id="2005" name="question_1" value="2005">
+        <label for="2005">2005</label><br>
+        <input type="radio" id="1996" name="question_1" value="1996">
+        <label for="1996">1996</label><br>
+        <input type="radio" id="2012" name="question_1" value="2012">
+        <label for="2012">2012</label><br>
+      </form>
+    </div>
+
   </main>
+
 
   <footer>Feito com lágrimas e desespero por <a href="http://github.com/mauricio-alves" target="_blank">Maurício
       Alves</a>

@@ -11,6 +11,11 @@ class Game {
     console.log("clicou2");
     startBtn.setAttribute("disabled", true);
     rulesBtn.setAttribute("disabled", true);
+    userChances.classList.toggle("hidden");
     disabledBtn.innerText = "Go!";
+  }
+
+  showFirstQuestion() {
+    firstQuestion.classList.toggle("hidden");
   }
 }
