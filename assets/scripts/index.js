@@ -8,7 +8,11 @@ const disabledBtn = document.querySelector(".start-btn");
 const displayed = document.querySelector(".rules-board");
 const userChances = document.querySelector("#user-chances");
 
-const firstQuestion = document.querySelector(".first-question");
+const question = document.querySelector(".question-section");
+const questionText = document.querySelector(".question");
+const questionForm = document.querySelector(".options");
+const questionInput = document.querySelectorAll(".options input");
+const questionLabel = document.querySelectorAll(".options label");
 
 const game = new Game(gameBoard);
 
@@ -21,9 +25,15 @@ startBtn.addEventListener("click", (event) => {
   event.preventDefault();
   game.startGame();
   game.showFirstQuestion();
+  // game.showSecondQuestion();
 });
 
 entendiBtn.addEventListener("click", (event) => {
   event.preventDefault();
   game.showRules();
 });
+
+// question.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   game.validatingFirstQuestion();
+// });
