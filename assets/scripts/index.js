@@ -4,6 +4,7 @@ const rulesBtn = document.querySelector("#rules");
 const startBtn = document.querySelector("#start");
 const entendiBtn = document.querySelector(".entendi-btn");
 const disabledBtn = document.querySelector(".start-btn");
+const nextQuestionBtn = document.querySelector(".next-btn");
 
 const displayed = document.querySelector(".rules-board");
 const userChances = document.querySelector("#user-chances");
@@ -16,6 +17,9 @@ const questionLabel = document.querySelectorAll(".options label");
 
 const game = new Game(gameBoard);
 
+let count = 0;
+let i = 0;
+
 rulesBtn.addEventListener("click", (event) => {
   event.preventDefault();
   game.showRules();
@@ -24,8 +28,7 @@ rulesBtn.addEventListener("click", (event) => {
 startBtn.addEventListener("click", (event) => {
   event.preventDefault();
   game.startGame();
-  game.showFirstQuestion();
-  // game.showSecondQuestion();
+  game.showQuestion(count);
 });
 
 entendiBtn.addEventListener("click", (event) => {
@@ -33,7 +36,14 @@ entendiBtn.addEventListener("click", (event) => {
   game.showRules();
 });
 
-// question.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   game.validatingFirstQuestion();
-// });
+question.addEventListener("click", (event) => {
+  game.validateQuestion(event.path[i].value);
+  console.log(event.path);
+});
+
+nextQuestionBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  count++;
+  game.showQuestion(count);
+  i++;
+});

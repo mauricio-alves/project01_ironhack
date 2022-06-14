@@ -84,7 +84,7 @@ footer a {
 .rules-board {
   background-color: white;
   display: flex;
-  width: 400px;
+  width: 00px;
   height: 250px;
   font-size: 14px;
   justify-content: center;
@@ -109,10 +109,16 @@ footer a {
 }
 
 .question-section {
-  padding: 20px 0 0 20px;
+  padding: 20px 20px 0 20px;
   background-color: white;
   width: 300px;
-  height: 150px;
+  height: 200px;
   font-size: 14px;
   border-radius: 10px;
+}
+
+.next-btn {
+  margin-left: 150px;
+  background-color: black;
+  color: white;
 }
