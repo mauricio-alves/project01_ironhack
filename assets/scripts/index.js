@@ -16,6 +16,7 @@ const nextQuestionBtn = document.querySelector(".next-btn");
 const displayed = document.querySelector(".rules-board");
 const userChances = document.querySelector("#user-chances");
 
+const gameScreen = document.querySelector(".inicio");
 const question = document.querySelector(".question-section");
 const questionText = document.querySelector(".question");
 const questionForm = document.querySelector(".options");
@@ -57,6 +58,7 @@ nextQuestionBtn.addEventListener("click", (event) => {
   event.preventDefault();
   count++;
   game.showQuestion(count);
+  game.clearRadioInput();
 });
 
 gameOverBtn.addEventListener("click", () => {

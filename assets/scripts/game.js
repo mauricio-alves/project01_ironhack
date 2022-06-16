@@ -97,13 +97,24 @@ class Game {
       winnerBtn.classList.toggle("hidden");
       correctAnswer.classList.toggle("hidden");
       win.play();
+      gameScreen.classList.remove('inicio');
+      gameScreen.classList.add('venceu');
     }
 
     if (playerHealth.innerText == 0) {
       gameOverBtn.classList.toggle("hidden");
       question.classList.toggle("hidden");
       wrongAnswer.classList.toggle("hidden");
+      gameScreen.classList.remove('inicio');
+      gameScreen.classList.add('perdeu');
+
       lose.play();
+    }
+  }
+
+  clearRadioInput() {
+    for (let i = 0; i < questionInput.length; i++) {
+      questionInput[i].checked = false;
     }
   }
 }

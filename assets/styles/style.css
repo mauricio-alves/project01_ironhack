@@ -14,13 +14,30 @@ body {
 
 main {
   height: 600px;
-  background-image: url("../images/cs_fy_pool_day.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.inicio {
+  background-image: url("../images/cs_fy_pool_day.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.venceu {
+  background-image: url("../images/ct_win.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.perdeu {
+  background-image: url("../images/explosion.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -126,12 +143,17 @@ footer a {
 
 .result-board {
   padding: 20px 20px 0 20px;
-  background-color: white;
   width: 150px;
-  height: 100px;
+  height: 150px;
   font-size: 14px;
   border-radius: 10px;
   margin-bottom: 30px;
+  position: absolute;
+  background-color: rgb(223, 219, 219);
+}
+
+.result-board img {
+  margin: 0 0 20px 130px;
 }
 
 .result-btn {
@@ -150,8 +172,4 @@ footer a {
 .lose,
 .begin {
   display: none;
-}
-
-.response {
-  background-color: rgb(223, 219, 219);
 }
