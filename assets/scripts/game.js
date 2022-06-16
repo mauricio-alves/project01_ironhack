@@ -50,6 +50,7 @@ class Game {
     question.classList.toggle("hidden");
     userChances.classList.toggle("hidden");
     disabledBtn.innerText = "Go!";
+    begin.play();
   }
 
   showQuestion(count) {
@@ -75,17 +76,34 @@ class Game {
   }
 
   validateQuestion(event) {
-    let index = i;
-    console.log(index);
-    console.log(this.questions[index].correctAnswer);
+    let p = answer;
+    let index = count;
+    let vida = Number(playerHealth.innerText);
+
     if (event == this.questions[index].correctAnswer) {
       console.log(event, "acertou!");
+      correctAnswer.classList.toggle("hidden");
     } else {
       console.log(event, "errou!");
+      vida = vida - 2;
+      let newVida = vida.toString();
+      playerHealth.innerText = newVida;
+      wrongAnswer.classList.toggle("hidden");
+      p.innerText = `Errado! A resposta correta é ${this.questions[index].correctAnswer}!`;
+    }
+
+    if (index == 4 && playerHealth.innerText > 0) {
+      question.classList.toggle("hidden");
+      winnerBtn.classList.toggle("hidden");
+      correctAnswer.classList.toggle("hidden");
+      win.play();
+    }
+
+    if (playerHealth.innerText == 0) {
+      gameOverBtn.classList.toggle("hidden");
+      question.classList.toggle("hidden");
+      wrongAnswer.classList.toggle("hidden");
+      lose.play();
     }
   }
-
-  // round() {
-  //   showQuestion(count);
-  // }
 }

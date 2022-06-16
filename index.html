@@ -25,7 +25,7 @@
   <main>
     <div id="game-board">
       <div id="user-chances" class="hidden">
-        <p>Você tem <span>4</span> chances.</p>
+        <p id="life">Você tem <span>4</span> chances.</p>
       </div>
       <div class="rules-board hidden">
         <ul>
@@ -38,6 +38,27 @@
         </ul>
         <button type="submit" id="entendi" class="btn entendi-btn">OK. Let's GO!</button>
       </div>
+    </div>
+
+    <div class="correct result-board response hidden">
+      <img src="./assets/images/icons8-close-window-24.png" alt="close button" class="close-btn">
+      <p>Resposta correta!</p>
+    </div>
+    <div class="wrong result-board response hidden">
+      <img src="./assets/images/icons8-close-window-24.png" alt="close button" class="close-btn">
+      <p class="answer"></p>
+    </div>
+
+    <div class="rules-board game-over hidden">
+      <h1>Game Over!</h1>
+      <img src="./assets/images/iconecsgo.jpg" alt="counter strike icon">
+      <button type="submit" class="btn entendi-btn">Play again</button>
+    </div>
+
+    <div class="rules-board winner hidden">
+      <h1>Congratulations!</h1>
+      <img src="./assets/images/iconecsgo.jpg" alt="counter strike icon">
+      <button type="submit" class="btn entendi-btn">Play again</button>
     </div>
 
     <div class="question-section hidden">
@@ -56,13 +77,15 @@
       </form>
       <button type="submit" id="next" class="btn next-btn">Next</button>
     </div>
-
   </main>
-
 
   <footer>Feito com lágrimas e desespero por <a href="http://github.com/mauricio-alves" target="_blank">Maurício
       Alves</a>
   </footer>
+  <audio class="audio-theme" src="./assets/audios/theme_song.mp3" preload="auto"></audio>
+  <audio class="win" src="./assets/audios/ctwin.wav"></audio>
+  <audio class="lose" src="./assets/audios/c4_explode1.wav"></audio>
+  <audio class="begin" src="./assets/audios/gogogo.mp3"></audio>
   <script src="./assets/scripts/game.js"></script>
   <script src="./assets/scripts/index.js"></script>
 </body>

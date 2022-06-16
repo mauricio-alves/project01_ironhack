@@ -20,6 +20,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 header {
@@ -121,4 +122,36 @@ footer a {
   margin-left: 150px;
   background-color: black;
   color: white;
+}
+
+.result-board {
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  width: 150px;
+  height: 100px;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.result-btn {
+  margin: 20px 0 0 15px;
+  background-color: black;
+  color: white;
+}
+
+.game-over,
+.winner {
+  padding: 0;
+}
+
+.audio-theme,
+.win,
+.lose,
+.begin {
+  display: none;
+}
+
+.response {
+  background-color: rgb(223, 219, 219);
 }

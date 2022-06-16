@@ -1,3 +1,10 @@
+const theme = document.querySelector(".audio-theme");
+theme.play();
+
+const win = document.querySelector(".win");
+const lose = document.querySelector(".lose");
+const begin = document.querySelector(".begin");
+
 const gameBoard = document.querySelector("#game-board");
 
 const rulesBtn = document.querySelector("#rules");
@@ -15,10 +22,16 @@ const questionForm = document.querySelector(".options");
 const questionInput = document.querySelectorAll(".options input");
 const questionLabel = document.querySelectorAll(".options label");
 
+const correctAnswer = document.querySelector(".correct");
+const wrongAnswer = document.querySelector(".wrong");
+const gameOverBtn = document.querySelector(".game-over");
+const winnerBtn = document.querySelector(".winner");
+
 const game = new Game(gameBoard);
 
+let playerHealth = document.querySelector("#life span");
+let answer = document.querySelector(".answer");
 let count = 0;
-let i = 0;
 
 rulesBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -36,14 +49,28 @@ entendiBtn.addEventListener("click", (event) => {
   game.showRules();
 });
 
-question.addEventListener("click", (event) => {
-  game.validateQuestion(event.path[i].value);
-  console.log(event.path);
+questionForm.addEventListener("click", (event) => {
+  game.validateQuestion(event.path[0].value);
 });
 
 nextQuestionBtn.addEventListener("click", (event) => {
   event.preventDefault();
   count++;
   game.showQuestion(count);
-  i++;
+});
+
+gameOverBtn.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+winnerBtn.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+correctAnswer.addEventListener("click", (event) => {
+  correctAnswer.classList.toggle("hidden");
+});
+
+wrongAnswer.addEventListener("click", (event) => {
+  wrongAnswer.classList.toggle("hidden");
 });
