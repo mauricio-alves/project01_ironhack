@@ -1,4 +1,8 @@
 const theme = document.querySelector(".audio-theme");
+const bodyPage = document.querySelector("html");
+bodyPage.addEventListener("click", () => {
+  theme.play();
+});
 theme.play();
 
 const win = document.querySelector(".win");
