@@ -1,6 +1,6 @@
 # Quiz Counter-Strike!
 
-A quiz about the fps game Counter-Strike. I made it as the first project of the Web Development at Ironhack bootcamp.
+A quiz about the fps game Counter-Strike. I made it as the first project of the Web Development bootcamp at Ironhack.
 
 Link of the game: [Deploy link](https://mauricio-alves.github.io/project01_ironhack/)
 
